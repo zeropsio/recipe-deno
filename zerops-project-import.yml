@@ -1,5 +1,8 @@
 project:
-  - name: recipe-deno
+  name: recipe-deno
+  tags:
+    - zerops-recipe
+    
 services:
   - hostname: app
     type: deno@1
