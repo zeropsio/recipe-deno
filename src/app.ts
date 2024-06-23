@@ -20,6 +20,9 @@ const connectDB = async () => {
     user: config.db.username,
     password: config.db.password,
     database: config.db.database,
+    tls: {
+      enabled: false
+    }
   });
 
   await client.connect();
