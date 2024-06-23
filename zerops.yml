@@ -9,7 +9,16 @@ zerops:
         - deno.jsonc
     run:
       base: deno@1
+      envVariables:
+        DB_NAME: db
+        DB_HOST: db
+        DB_USER: db
+        DB_PASS: ${db_password}
       ports:
         - port: 8000
           httpSupport: true
       start: deno task start
+      healthCheck:
+        httpGet:
+          port: 3000
+          path: /status
