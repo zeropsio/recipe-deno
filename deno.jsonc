@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run -A --watch --unstable src/app.ts",
+    "dev": "deno run -A --watch --unstable src/index.ts",
     "start": "deno run --allow-net --allow-env --allow-read dist/bundle.js",
     "build": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run build.js"
   }
