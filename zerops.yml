@@ -1,0 +1,15 @@
+zerops:
+  - setup: app
+    build:
+      base: deno@latest
+      buildCommands:
+        - deno task build
+      deployFiles:
+        - dist
+        - deno.json
+    run:
+      base: deno@latest
+      ports:
+        - port: 8000
+          httpSupport: true
+      start: deno task start

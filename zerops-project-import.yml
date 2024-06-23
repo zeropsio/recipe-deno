@@ -1,0 +1,7 @@
+project:
+  - name: recipe-deno
+services:
+  - hostname: app
+    type: deno@latest
+    buildFromGit: https://github.com/fxck/recipe-deno
+    enableSubdomainAccess: true
