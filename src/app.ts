@@ -48,7 +48,7 @@ router.get("/", async (context) => {
   await client.queryArray(`INSERT INTO entries(data) VALUES ($1)`, [data]);
 
   const result = await client.queryObject<CountResult>(`SELECT COUNT(*) FROM entries;`);
-  const count = result.rows[0].count;
+  const count = Number(result.rows[0].count);
 
   console.info('Entry succesfully added: ', data);
 
