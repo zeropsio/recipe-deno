@@ -20,5 +20,5 @@ zerops:
       start: deno task start
       healthCheck:
         httpGet:
-          port: 3000
+          port: 8000
           path: /status
